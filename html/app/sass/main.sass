@@ -1,0 +1,356 @@
+@import "vars"
+@import "fonts"
+@import "libs"
+
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff	
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default_font
+	overflow-x: hidden
+	color: $text
+
+	transform: translateZ(0)
+
+	input, textarea
+		border: #666 1px solid
+		outline: none
+		&:focus:required:invalid
+			border-color: red
+		&:required:valid
+			border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+	&.img-width
+		width: 100%
+
+.text-center
+	text-align: center
+
+b, strong
+	font-weight: bold
+
+.main-wrap
+	// Parallax effect
+	perspective: 2.5px
+	transform-style: preserve-3d
+	height: 100vh
+	overflow-y: scroll
+	overflow-x: hidden
+	-webkit-overflow-scrolling: touch
+
+header
+	box-sizing: border-box
+	position: relative
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: #000000
+		opacity: 0.4
+		z-index: 0 
+
+.parallax
+	display: block
+	box-sizing: border-box
+	-moz-transform-style: preserve-3d
+	min-height: 80vh
+	min-width: 100vw
+	position: relative
+	-moz-transform: translateZ(-1px) scale(1.4)
+	z-index: -1
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: #000000
+		opacity: 0.4
+		z-index: 0
+		
+.paralax-section
+	position: relative
+	min-height: 80vh
+	&::before
+		position: absolute
+		content: ''
+		top: 0
+		right: 0
+		bottom: 0
+		left: 0
+		background-color: #000000
+		opacity: 0.4
+		z-index: 0
+		
+
+.static-section
+	background-color: #fff
+	min-height: 50vh
+	position: relative
+	padding-top: 5vh
+	padding-bottom: 5vh
+	
+			
+.bg
+	z-index: -1
+	background-image:   url(/img/1.jpg)
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	@supports (-webkit-overflow-scrolling: touch)
+		background-attachment: scroll
+			
+
+.bg-0
+	background-image: url(/img/8.jpg) 
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	
+	@supports (-webkit-overflow-scrolling: touch)
+		background-attachment: scroll
+		
+.bg-1
+	background-image: url(/img/3.jpg)
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	@supports (-webkit-overflow-scrolling: touch)
+		background-attachment: scroll
+
+.bg-2
+	background-image: url(/img/4.jpg)
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	@supports (-webkit-overflow-scrolling: touch)
+		background-attachment: scroll
+	
+.bg-3
+	background-image: url(/img/5.jpg)
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	@supports (-webkit-overflow-scrolling: touch)
+		background-attachment: scroll
+	
+.bg-4
+	background-image: url(/img/6.jpg)
+	background-attachment: fixed
+	background-size: cover
+	background-position: center
+	@supports (-webkit-overflow-scrolling: touch)
+		background-attachment: scroll
+
+.title
+	position: relative
+	display: inline-block
+	font-family: $default-font
+	font-weight: normal
+	font-size: 42px
+	text-align: left
+	color: #fff
+	text-transform: uppercase
+	margin-top: 30px
+	line-height: 1.4
+	
+	&::after
+		content: ''
+		display: block
+		border: 1px solid #ffffff
+	
+.subtitle
+	position: relative
+	font-family: $default-font
+	font-weight: normal
+	font-size: 25px
+	text-align: left
+	color: #ffffff
+	line-height: 1.1
+
+.phone-number 
+	position: relative
+	display: block
+	font-family: $default-font
+	font-weight: normal
+	font-size: 30px
+	text-align: right
+	color: #fff
+	margin-top: 5px
+	margin-bottom: 0px
+	line-height: 1.4
+	&:first-child
+		margin-top: 30px
+
+	
+.banner
+	position: relative
+	display: block
+	margin-top: $gutter*2
+	color: #ffffff
+	font-size: 24px
+	line-height: 1.4
+	text-align: center
+	padding: $gutter 0
+	p 
+		margin: $gutter*2 0 $gutter 0 
+
+	button
+		+button-size(8px, 20px, 18px, 1.4, 5)
+		
+		
+.btn-primary
+	background-color: $blue-color
+	border: none
+	transition: background .5s ease-in
+	text-align: center
+	text-transform: uppercase
+	&:hover
+		background: darken($blue-color, 20)
+
+.btn-outline-primary
+	background-color: rgba(225, 225, 225, 0.4)
+	border: none
+	transition: background .5s ease-in, color 0.5s ease-in
+	text-align: center
+	text-transform: uppercase
+	color: #ffffff
+	&:hover
+		background: darken(#ffffff, 20)
+		color: $blue-color
+		border: none
+
+
+.slogan
+	position: relative
+	display: block
+	margin-top: 200px
+	padding-bottom: 90px
+	font-family: $default-font
+	font-weight: normal
+	font-size: 36px
+	text-align: center
+	color: #fff	
+
+
+.header-container
+	position: absolute	
+	top: 50%
+	
+	transform: translate(-50% -50%)
+	transform-origin: center center
+	width: 100%
+	h2
+		color: #ffffff	
+		z-index: 1
+		text-align: center
+		position: relative
+		display: block
+
+.text
+	position: relative
+	color: $green-color
+	p 
+		text-indent: $gutter	
+		font-size: 18px
+
+.timeline-item
+	p
+		color: #224412
+		text-indent: 0
+		padding-top: $gutter
+		padding-bottom: $gutter
+		margin-top: 0
+		margin-bottom: 0
+		line-height: 1.4
+		font-size: 20px
+		
+	&::before
+		content: '●'
+		color: $blue-color
+		position: absolute
+		width: 4px
+		height: 100%
+		background-color: $blue-color
+		font-size: 40px
+		line-height: 320%
+		text-indent: -10px
+
+	&:nth-child(1)
+		&::before
+			line-height: 0
+			height: 50%
+			top: 50%
+			
+	&:nth-child(4)
+		&::before
+			line-height: 2.5
+
+	&:nth-child(6)
+		&::before
+			line-height: 2.5
+			
+	&:nth-child(even)
+		text-align: right
+		padding-right: 40px
+		&::before
+			right: 0
+
+	&:nth-child(odd)	
+		+make-col-offset(6)
+		text-align: left
+		padding-left: 40px
+		left: -4px
+		&::before
+			left: 0
+
+.video-section
+	.text
+		p
+			text-indent: 0
+			text-align: center
+
+.input-group
+	&-text
+		border-color: $blue-color
+		background-color: $blue-color
+		color: #ffffff
+
+.form-control
+	border-color: $blue-color
+
+		
+.input-group>.form-control:not(:first-child)
+	border-bottom-right-radius: 4px
+	border-top-right-radius: 4px
+
+footer 
+	position: relative
+	min-height: 100px
+	background-color: darken($blue-color, 20%)
+	color: #ffffff
+	font-size: 18px
+	p
+		position: relative
+		text-align: center
+		padding-top: $gutter
+		margin: auto
+
+
+@import "media" // Always at the end

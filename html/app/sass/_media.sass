@@ -1,0 +1,145 @@
+@import "vars"
+
+
+/*==========  Desktop First  ==========*/
+
+// ≥1200px
++media-breakpoint-down(lg)
+    
+    .title
+        font-size: 30px
+    .subtitle
+        font-size: 20px
+    .phone-number
+        font-size: 25px
+
+    .banner
+        font-size: 22px  
+        a 
+            padding: 10px 20px
+            font-size: 14px
+            line-height: 1.4
+
+    .btn
+        +button-size(10px, 20px, 16px, 1.4, 5) 
+    .slogan
+        font-size: 32px
+
+// ≥992px
++media-breakpoint-down(md)
+        
+    .title
+        font-size: 26px
+    .subtitle
+        font-size: 16px
+    .phone-number
+        font-size: 22px
+    .banner
+        font-size: 19px
+        a 
+            padding: 8px 18px
+            font-size: 14px
+            
+    .btn
+        +button-size(8px, 18px, 14px, 1.4, 5)
+
+    .slogan
+        font-size: 28px
+        
+    .text
+        h2
+            font-size: 18px
+        p
+            font-size: 16px
+       
+// ≥768px
++media-breakpoint-down(sm)
+
+    .title
+        font-size: 20px
+    .subtitle
+        font-size: 12px
+    .phone-number
+        font-size: 20px
+    .banner
+        // margin-top: 90px
+        font-size: 15px
+        a 
+            padding: 8px 18px
+            font-size: 12px
+            line-height: 1.4
+    .btn
+        +button-size(8px, 18px, 12px, 1.4, 5)
+    .slogan
+        font-size: 22px
+
+    .form-check-label
+        font-size: 14px 
+
+// ≥576px
++media-breakpoint-down(xs)
+    .title
+        // margin-left: 20px
+        font-size: 16px
+    .subtitle
+        font-size: 10px
+    .phone-number
+        font-size: 14px
+    .banner
+        // margin-top: 60px
+        font-size: 16px
+        a 
+            padding: 8px 14px
+            font-size: 10px
+            line-height: 1.4
+
+    .btn
+        +button-size(8px, 10px, 10px, 1.4, 5)
+        
+    .slogan
+        font-size: 20px
+        margin-top: 60px
+        padding-bottom: 20px
+
+    .timeline-item
+        p 
+            text-align-last: left
+            
+        &:nth-child(odd)
+            +make-col-offset(0)
+            
+            &::before
+                left: 4px
+        &:nth-child(even)
+            text-align: left
+            padding-left: 40px
+            &::before
+                left: 0
+    .text
+        h2
+            font-size: 16px
+        p
+            font-size: 14px  
+
+    .form-group
+        font-size: 14px
+        input
+            font-size: 14px        
+
+    .form-check-label
+        font-size: 12px
+
+
+/*==========  Mobile First  ==========*/
+
+// ≤576px
++media-breakpoint-up(sm)
+
+// ≤768px
++media-breakpoint-up(md)
+
+// ≤992px
++media-breakpoint-up(lg)
+
+// ≤1200px
++media-breakpoint-up(xl)
